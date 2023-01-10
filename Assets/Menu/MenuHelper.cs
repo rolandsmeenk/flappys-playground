@@ -35,7 +35,7 @@ public class MenuHelper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Slider.SliderValue = Birb.Speed;
+        Slider.Value = Birb.Speed;
 
         HandMeshButton.OnClicked.AddListener(() =>
         {
@@ -54,8 +54,8 @@ public class MenuHelper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Birb.Speed = Slider.SliderValue;
-        Slider.SliderValue = Birb.Speed;
+        Birb.Speed = Slider.Value;
+        Slider.Value = Birb.Speed;
         speedLabel.text = Birb.Speed.ToString("F2");
     }
 }
